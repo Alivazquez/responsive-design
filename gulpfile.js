@@ -42,7 +42,7 @@ gulp.task('styl', function() {
 })
 
 gulp.task('jade-components', function () {
-  return gulp.src('./lib/**/**/*.jade')
+  return gulp.src('./lib/index.jade')
   .pipe(jade({
     pretty: true
   }))
