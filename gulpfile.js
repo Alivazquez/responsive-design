@@ -26,7 +26,7 @@ gulp.task('js', function() {
 
 
 gulp.task('styl', function() {
-  return gulp.src('./lib/app.styl') // entry point de styl
+  return gulp.src('./lib/styl/app.styl') // entry point de styl
     .pipe(stylus({ 
       use: nib(),
       'include css': true
@@ -48,7 +48,7 @@ gulp.task('jade-components', function () {
 
 gulp.task('watch', function(){
   livereload.listen()
-  gulp.watch('./lib/style/app.styl', ['styl'])
+  gulp.watch('./lib/styl/app.styl', ['styl'])
   gulp.watch('./lib/views/index.jade', ['jade-components'])
   gulp.watch('./lib/js/app.js', ['js'])
 })
